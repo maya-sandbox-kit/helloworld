@@ -38,14 +38,12 @@ window.customElements.define('albert-helloworld', HelloWorld);
 - `onQuery(ev)`: Placeholder for handling query changes dynamically.
 
 ## Usage
-```html
-http://localhost:3000/#helloworld
-```
-Or with query
-```html
-http://localhost:3000/#helloworld?query=neelesh
-```
-This loads `Hello, User!` if a query is provided, otherwise defaults to `Hello, world!`.
+
+<a href="http://localhost:3000/#helloworld" target="_blank" rel="noopener noreferrer">Helloworld - click here</a>
+
+<a href="http://localhost:3000/#helloworld?query=neelesh" target="_blank" rel="noopener noreferrer">Helloworld with query- click here</a>
+
+This loads `Hello, <query>!` if a query is provided, otherwise defaults to `Hello, world!`.
 
 ## Summary
 A lightweight MFE that displays a dynamic greeting using Maya’s store and lifecycle methods.
