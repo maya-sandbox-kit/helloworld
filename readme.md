@@ -39,11 +39,11 @@ window.customElements.define('albert-helloworld', HelloWorld);
 
 ## Usage
 ```html
-<albert-helloworld slot="main"></albert-helloworld>
+http://localhost:3000/#helloworld
 ```
-Or dynamically:
-```js
-Maya.Load('helloworld?target=main&query=User');
+Or with query
+```html
+http://localhost:3000/#helloworld?query=neelesh
 ```
 This loads `Hello, User!` if a query is provided, otherwise defaults to `Hello, world!`.
 
