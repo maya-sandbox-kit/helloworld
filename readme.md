@@ -11,11 +11,11 @@ The `HelloWorld` MFE is a simple micro front-end (MFE) built using the Maya fram
 ## How It Works
 ### Store
 ```js
-Maya.Store.helloword = {
-    name: 'helloword',
+Maya.Store.helloworld = {
+    name: 'helloworld',
     data: {},
     events: {
-        OnLoad: async ev => Maya.Store.SetData({store : 'helloword', key : ev.key})({msg : `Hello ${ev.query || 'world'}!`})
+        OnLoad: async ev => Maya.Store.SetData({store : 'helloworld', key : ev.key})({msg : `Hello ${ev.query || 'world'}!`})
     }
 }
 ```
@@ -27,9 +27,9 @@ class HelloWorld extends MayaMFE {
     constructor() {
         super()
         this.setView('main')
-        this.setStore(Maya.Store.helloword)
+        this.setStore(Maya.Store.helloworld)
     }
-    onLoad = async ev => Maya.Store.helloword.events.OnLoad(ev)
+    onLoad = async ev => Maya.Store.helloworld.events.OnLoad(ev)
     onQuery = async ev => {}
 }
 window.customElements.define('albert-helloworld', HelloWorld);

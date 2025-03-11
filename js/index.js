@@ -1,11 +1,11 @@
 // Extend Maya Store with mfe
-Maya.Store.helloword = {
-    name: 'helloword',
+Maya.Store.helloworld = {
+    name: 'helloworld',
     data: {},
     events: {
         // Do the state management under events. Store data under components key.
         // Every instance of the MFE/ Maya component gets or inherits a unique ID.
-        OnLoad: async ev => Maya.Store.SetData({store : 'helloword', key : ev.key})({msg : `Hello ${ev.query || 'world'}!`})
+        OnLoad: async ev => Maya.Store.SetData({store : 'helloworld', key : ev.key})({msg : `Hello ${ev.query || 'world'}!`})
     }
 }
 
@@ -13,13 +13,13 @@ class HelloWorld extends MayaMFE {
     constructor() {
         super()
         this.setView('main')
-        this.setStore(Maya.Store.helloword)
+        this.setStore(Maya.Store.helloworld)
     }
     getTitle = () => "HelloWorld"
     isSecured = () => false
 
     // No state management should be done in Component definition
-    onLoad = async ev => Maya.Store.helloword.events.OnLoad(ev)
+    onLoad = async ev => Maya.Store.helloworld.events.OnLoad(ev)
     onQuery = async ev => {}
 }
 
