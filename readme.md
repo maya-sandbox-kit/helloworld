@@ -39,8 +39,14 @@ window.customElements.define('albert-helloworld', HelloWorld);
 
 ## Usage
 
+```html
+http://localhost:3000/#helloworld
+```
 <a href="http://localhost:3000/#helloworld" target="_blank" rel="noopener noreferrer">Helloworld - click here</a>
 
+```html
+http://localhost:3000/#helloworld?query=neelesh
+```
 <a href="http://localhost:3000/#helloworld?query=neelesh" target="_blank" rel="noopener noreferrer">Helloworld with query- click here</a>
 
 This loads `Hello, <query>!` if a query is provided, otherwise defaults to `Hello, world!`.
