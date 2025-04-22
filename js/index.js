@@ -21,4 +21,5 @@ class HelloWorld extends MayaMFE {
     onQuery = async ev => {}
 }
 
-Maya.Register({ name : 'helloworld'})(HelloWorld);
+// Registe the MFE
+Maya.Register({ name : 'helloworld'})(HelloWorld)

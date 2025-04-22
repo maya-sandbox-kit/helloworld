@@ -12,8 +12,6 @@ The `HelloWorld` MFE is a simple micro front-end (MFE) built using the Maya fram
 ### Store
 ```js
 Maya.Store.helloworld = {
-    name: 'helloworld',
-    data: {},
     events: {
         OnLoad: async ev => Maya.Store.SetData({store : 'helloworld', key : ev.key})({msg : `Hello ${ev.query || 'world'}!`})
     }
@@ -32,7 +30,7 @@ class HelloWorld extends MayaMFE {
     onLoad = async ev => Maya.Store.helloworld.events.OnLoad(ev)
     onQuery = async ev => {}
 }
-window.customElements.define('albert-helloworld', HelloWorld);
+Maya.Register({ name : 'helloworld'})(HelloWorld)
 ```
 - `onLoad(ev)`: Loads the message when the component initializes.
 - `onQuery(ev)`: Placeholder for handling query changes dynamically.
