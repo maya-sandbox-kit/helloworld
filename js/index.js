@@ -1,7 +1,5 @@
 // Extend Maya Store with mfe
 Maya.Store.helloworld = {
-    name: 'helloworld',
-    data: {},
     events: {
         // Do the state management under events. Store data under components key.
         // Every instance of the MFE/ Maya component gets or inherits a unique ID.
@@ -23,4 +21,4 @@ class HelloWorld extends MayaMFE {
     onQuery = async ev => {}
 }
 
-window.customElements.define('albert-helloworld', HelloWorld);
+Maya.Register({ name : 'helloworld'})(HelloWorld);
